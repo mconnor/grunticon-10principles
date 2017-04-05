@@ -1,0 +1,224 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<title>SVG Animation - 10 Principles - Burngin Man</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.css">
+	<style>
+		body {
+			/*background-image: linear-gradient(#eee 25%, transparent 25%, transparent), linear-gradient(#eee 25%, transparent 25%, transparent), linear-gradient(transparent 75%, #eee 75%), linear-gradient(transparent 75%, #eee 75%);
+			width: auto;*/
+			background-size: 10px 10px;
+		}
+
+		.section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.icon-row {
+			display: flex;
+			flex-direction: row;
+			width: 90%;
+			justify-content: space-between;
+		}
+
+		.icon {
+			width: 50px;
+			height: 50px;
+			transition: 1s ease-in-out;
+
+
+		}
+
+		.spin {
+			transform: rotate(360deg) scaleX(18) scaleY(18);
+z-index: 2;
+position: absolute;
+top:50%;
+    left:50%;
+		
+		}
+
+		.box {
+			width: 190px;
+			height: 300px;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.rotate90 {
+			/*transform: rotate(90deg);*/
+		}
+	</style>
+	<script>
+		/*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+		(function(e) {
+			function t(t, n, r, o) {
+				"use strict";
+
+				function a() {
+					for (var e, n = 0; u.length > n; n++) u[n].href && u[n].href.indexOf(t) > -1 && (e = !0);
+					e ? i.media = r || "all" : setTimeout(a)
+				}
+				var i = e.document.createElement("link"),
+					l = n || e.document.getElementsByTagName("script")[0],
+					u = e.document.styleSheets;
+				return i.rel = "stylesheet", i.href = t, i.media = "only x", i.onload = o || null, l.parentNode.insertBefore(i, l), a(), i
+			}
+			var n = function(r, o) {
+				"use strict";
+				if (r && 3 === r.length) {
+					var a = e.navigator,
+						i = e.Image,
+						l = !(!document.createElementNS || !document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect || !document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") || e.opera && -1 === a.userAgent.indexOf(
+							"Chrome") || -1 !== a.userAgent.indexOf("Series40")),
+						u = new i;
+					u.onerror = function() {
+						n.method = "png", n.href = r[2], t(r[2])
+					}, u.onload = function() {
+						var e = 1 === u.width && 1 === u.height,
+							a = r[e && l ? 0 : e ? 1 : 2];
+						n.method = e && l ? "svg" : e ? "datapng" : "png", n.href = a, t(a, null, null, o)
+					}, u.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==", document.documentElement.className += " grunticon"
+				}
+			};
+			n.loadCSS = t, e.grunticon = n
+		})(this);
+		(function(e, t) {
+			"use strict";
+			var n = t.document,
+				r = "grunticon:",
+				o = function(e) {
+					if (n.attachEvent ? "complete" === n.readyState : "loading" !== n.readyState) e();
+					else {
+						var t = !1;
+						n.addEventListener("readystatechange", function() {
+							t || (t = !0, e())
+						}, !1)
+					}
+				},
+				a = function(e) {
+					return t.document.querySelector('link[href$="' + e + '"]')
+				},
+				c = function(e) {
+					var t, n, o, a, c, i, u = {};
+					if (t = e.sheet, !t) return u;
+					n = t.cssRules ? t.cssRules : t.rules;
+					for (var l = 0; n.length > l; l++) o = n[l].cssText, a = r + n[l].selectorText, c = o.split(");")[0].match(/US\-ASCII\,([^"']+)/), c && c[1] && (i = decodeURIComponent(c[1]), u[a] = i);
+					return u
+				},
+				i = function(e) {
+					var t, o, a;
+					o = "data-grunticon-embed";
+					for (var c in e)
+						if (a = c.slice(r.length), t = n.querySelectorAll(a + "[" + o + "]"), t.length)
+							for (var i = 0; t.length > i; i++) t[i].innerHTML = e[c], t[i].style.backgroundImage = "none", t[i].removeAttribute(o);
+					return t
+				},
+				u = function(t) {
+					"svg" === e.method && o(function() {
+						i(c(a(e.href))), "function" == typeof t && t()
+					})
+				};
+			e.embedIcons = i, e.getCSS = a, e.getIcons = c, e.ready = o, e.svgLoadedCallback = u, e.embedSVG = u
+		})(grunticon, this);
+
+		grunticon(["icons.data.svg.css", "icons.data.png.css", "icons.fallback.css"]);
+	</script>
+	<noscript><link href="icons.fallback.css" rel="stylesheet"></noscript>
+
+</head>
+
+<body>
+	<div class="hero">
+		<div class="container">
+			<h1 class="title">10 Principles of Burning Man</h1>
+		</div>
+	</div>
+	<div class="section">
+		<div class="icon-row">
+			<div class='box'>
+				<h4>civic-responsibility</h4>
+				<div class="icon icon-wick-civic-responsibility"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>communal-effort</h4>
+				<div class="icon icon-wick-communal-effort"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>decommodification</h4>
+				<div class="icon icon-wick-decommodification"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>gifting</h4>
+				<div class="icon icon-wick-gifting"></div>
+
+			</div>
+
+			<div class='box'>
+				<h4>immediacy</h4>
+				<div class="icon icon-wick-immediacy"></div>
+
+			</div>
+		</div>
+		<div class="icon-row">
+
+			<div class='box'>
+				<h4>leaving-no-trace</h4>
+				<div class="icon icon-wick-leaving-no-trace"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>participation</h4>
+				<div class="icon icon-wick-participation"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>radical-inclusion</h4>
+				<div class="icon icon-wick-radical-inclusion"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>radical-self-expression</h4>
+				<div class="icon icon-wick-radical-self-expression"></div>
+
+			</div>
+
+
+			<div class='box'>
+				<h4>radical-self-reliance</h4>
+				<div class="icon icon-wick-radical-self-reliance"></div>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="footer">
+		<h2>Animation by <a href="http://www.cloudswing.info">Mike Connor</a></h2>
+		<h2>Symbol design by <a href="http://www.jameswickham.com/10-symbols/index.php">Wick</a></h2>
+	</div>
+	<script src='./main.js'></script>
+</body>
+
+</html>
